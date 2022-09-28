@@ -1,7 +1,7 @@
 const express = require('express')
 const os = require('os')
 const app = express()
-app.use(express.static('.'));
+app.use(express.static(__dirname))
 
 app.get('/', (req, res)=>{
     res.sendFile(__dirname + '/HTML.html')
@@ -16,4 +16,4 @@ app.get('/api/whoami', (req, res)=>{
     res.json({ipaddress: api, language: language, software: software})
 })
 
-module.exports = app
+app.listen(3000)
