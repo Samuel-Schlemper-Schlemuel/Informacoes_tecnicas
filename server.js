@@ -15,3 +15,5 @@ app.get('/api/whoami', (req, res)=>{
 
     res.json({ipaddress: api, language: language, software: software})
 })
+
+module.exports = app

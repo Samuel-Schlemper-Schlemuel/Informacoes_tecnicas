@@ -15,5 +15,6 @@
 		"express",
 		"freecodecamp"
 	],
+    "author": "Samuel Schlemper",
     "license": "MIT"
 }
