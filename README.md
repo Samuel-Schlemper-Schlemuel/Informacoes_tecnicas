@@ -1,2 +1,2 @@
 # Informacoes_tecnicas
-Um projeto do FCC
+Esse é o segundo projeto do FreeCodeCamp no curso "APIs e desenvolvimento de back-end"
