@@ -1,11 +1,8 @@
 const express = require('express')
 const os = require('os')
-const product = require('./api/product')
 const app = express()
 const PORT = process.env.PORT || 5050
 app.use(express.static(__dirname))
-
-app.use('/api/product', product)
 
 app.get('/', (req, res)=>{
     res.sendFile(__dirname + '/HTML.html')
