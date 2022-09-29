@@ -2,7 +2,7 @@ const express = require('express')
 const os = require('os')
 const app = express()
 const PORT = process.env.PORT || 5050
-app.use(express.static('.'))
+app.use(express.static('Public'))
 
 app.get('/', (req, res)=>{
     res.sendFile(__dirname + '/HTML.html')
