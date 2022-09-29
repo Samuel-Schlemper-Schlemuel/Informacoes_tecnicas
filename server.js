@@ -2,6 +2,7 @@ const express = require('express')
 const os = require('os')
 const product = require('./api/product')
 const app = express()
+const PORT = process.env.PORT || 5050
 app.use(express.static(__dirname))
 
 app.use('/api/product', product)
@@ -18,3 +19,5 @@ app.get('/api/whoami', (req, res)=>{
 
     res.json({ipaddress: api, language: language, software: software})
 })
+
+app.listen(PORT, () => {console.log(`Server is running in the port ${PORT}`)})
