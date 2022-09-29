@@ -1,7 +1,10 @@
 const express = require('express')
 const os = require('os')
+const product = require('./api/product')
 const app = express()
 app.use(express.static(__dirname))
+
+app.use('/api/product', product)
 
 app.get('/', (req, res)=>{
     res.sendFile(__dirname + '/HTML.html')
@@ -15,5 +18,3 @@ app.get('/api/whoami', (req, res)=>{
 
     res.json({ipaddress: api, language: language, software: software})
 })
-
-app.listen(3000)
