@@ -1,7 +1,5 @@
 const express = require('express')
-const os = require('os')
 const app = express()
-console.log(os)
 const PORT = process.env.PORT || 5050
 app.use(express.static(__dirname + '/public'))
 
@@ -10,9 +8,7 @@ app.get('/', (req, res)=>{
 })
 
 app.get('/api/whoami', (req, res)=>{
-    console.log('chegou')
-    const networkInfo = os.networkInterfaces()
-    const api = networkInfo['Wi-Fi'][1].address
+    const api = req.ip
     const language =  req.headers["accept-language"]
     const software = req.headers["user-agent"]
 
