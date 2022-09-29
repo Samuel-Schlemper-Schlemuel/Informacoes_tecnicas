@@ -1,13 +1,13 @@
 {
     "name": "reader_tecnical_informaition",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "description": "A FCC project",
-    "main": "server.js",
+    "main": "index.js",
     "engines": {
         "node": "14.x"
     },
     "scripts": {
-        "start": "node server.js"
+        "start": "node index.js"
     },
     "dependencies": {
         "express": "~4.18.1",
